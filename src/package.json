@@ -1,0 +1,32 @@
+{
+  "name": "gulpfile_generator",
+  "version": "1.1.0",
+  "description": "This is a genarator for gulpfile and package.json",
+  "author": "",
+  "url": "",
+  "license": "MIT License",
+  "devDependencies": {
+    "browser-sync": "*",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "*",
+    "gulp-cache": "*",
+    "gulp-clean-css": "*",
+    "gulp-concat": "*",
+    "gulp-csscomb": "*",
+    "gulp-imagemin": "*",
+    "gulp-merge-media-queries": "*",
+    "gulp-plumber": "*",
+    "gulp-print": "^2.0.1",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sass-glob": "^1.0.8",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "*",
+    "hover.css": "^2.2.1",
+    "imagemin-pngquant": "^5.0.1",
+    "purecss": "^1.0.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.3"
+  }
+}
