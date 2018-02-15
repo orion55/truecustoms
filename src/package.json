@@ -22,9 +22,11 @@
     "gulp-sass-glob": "^1.0.8",
     "gulp-sourcemaps": "*",
     "gulp-uglify": "*",
+    "gulp-util": "^3.0.8",
     "hover.css": "^2.2.1",
     "imagemin-pngquant": "^5.0.1",
-    "purecss": "^1.0.0"
+    "purecss": "^1.0.0",
+    "vinyl-ftp": "^0.6.1"
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.3"

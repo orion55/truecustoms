@@ -15,10 +15,14 @@ var print = require('gulp-print');
 var sassGlob = require('gulp-sass-glob');
 var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
+var gutil = require('gulp-util');
+var ftp = require('vinyl-ftp');
 
 var docs = '../assets/';
+var subfolder = 'css';
 
 gulp.task('sass', function () {
+    subfolder = 'css';
     gulp.src(['./css/main.scss'])
         .pipe(plumber({
             handleError: function (err) {
@@ -80,7 +84,7 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('vendor', function () {
-    gulp.src(['./node_modules/font-awesome/css/font-awesome.css', './node_modules/purecss/build/buttons.css'])
+    gulp.src(['./node_modules/@fortawesome/fontawesome/styles.css'])
         .pipe(plumber({
             handleError: function (err) {
                 console.log(err);
@@ -99,12 +103,38 @@ gulp.task('vendor', function () {
 
 });
 
+gulp.task('deploy-ftp', function () {
+
+    var conn = ftp.create({
+        host: 'grol55wy.beget.tech',
+        user: 'grol55wy',
+        password: 'liDDJhuJ',
+        parallel: 10,
+        log: gutil.log
+    });
+
+    const path = '/truecustoms.infoblog72.ru/public_html/wp-content/themes/truecustoms/assets/';
+
+    var globs = [
+        '../assets/' + subfolder + '/**'
+    ];
+
+    conn.rmdir(path + subfolder, function (e) {
+        if (e === undefined) {
+            return gulp.src(globs, {base: '.', buffer: false})
+                .pipe(conn.newer(path)) // only upload newer files
+                .pipe(conn.dest(path));
+        }
+        return console.log(e);
+    });
+});
+
 gulp.task('watch', function () {
     browserSync.init({
         proxy: 'http://truecustoms.infoblog72.ru'
     });
     gulp.watch('../**/*.php').on('change', browserSync.reload);
-    gulp.watch(['./css/**/*.scss', './css/main.scss'], ['sass']);
+    gulp.watch(['./css/**/*.scss', './css/main.scss'], ['sass', 'deploy-ftp']);
     gulp.watch('./js/*.js', ['js']);
     gulp.watch('./img/**/*', ['images']);
 });
