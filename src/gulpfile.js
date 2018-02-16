@@ -44,10 +44,11 @@ gulp.task('sass', function () {
         .pipe(cleanCss())
         // .pipe(sourcemaps.write())
         .pipe(gulp.dest(docs + 'css/'))
-        .pipe(reload({stream: true}))
+        // .pipe(reload({stream: true}))
 });
 
 gulp.task('js', function () {
+    subfolder = 'js';
     gulp.src(['./js/*.js'])
         .pipe(concat('main.js'))
         .pipe(gulp.dest(docs + 'js/'))
@@ -56,7 +57,7 @@ gulp.task('js', function () {
         }))
         .pipe(uglify())
         .pipe(gulp.dest(docs + 'js/'))
-        .pipe(reload({stream: true}));
+        // .pipe(reload({stream: true}));
 });
 
 gulp.task('images', function () {
@@ -134,13 +135,13 @@ gulp.task('deploy-ftp', function () {
 });
 
 gulp.task('watch', function () {
-    browserSync.init({
+    /*browserSync.init({
         proxy: 'http://truecustoms.infoblog72.ru'
-    });
-    gulp.watch('../**/*.php').on('change', browserSync.reload);
+    });*/
+    // gulp.watch('../**/*.php').on('change', browserSync.reload);
     gulp.watch(['./css/**/*.scss', './css/main.scss'], ['sass', 'deploy-ftp']);
-    gulp.watch('./js/*.js', ['js']);
+    gulp.watch('./js/*.js', ['js', 'deploy-ftp']);
     gulp.watch('./img/**/*', ['images']);
 });
 
-gulp.task('default', ['sass', 'js', 'images', 'fonts', 'vendor-copy', 'vendor', 'watch']);
+gulp.task('default', ['sass', 'js', 'images', 'fonts', 'watch']);

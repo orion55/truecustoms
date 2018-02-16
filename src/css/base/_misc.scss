@@ -1,13 +1,10 @@
 .hvr-sweep-to-right {
   display: inline-block;
   vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
   position: relative;
-  -webkit-transition-property: color;
   transition-property: color;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   border-radius: 10px;
 }
@@ -21,15 +18,10 @@
   right: 0;
   bottom: 0;
   background: white;
-  -webkit-transform: scaleX(0);
   transform: scaleX(0);
-  -webkit-transform-origin: 0 50%;
   transform-origin: 0 50%;
-  -webkit-transition-property: transform;
   transition-property: transform;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
   border-radius: 10px;
 }
@@ -39,6 +31,82 @@
 }
 
 .hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
-  -webkit-transform: scaleX(1);
   transform: scaleX(1);
+}
+
+.sprite {
+  background: url('../img/info/spritesheet.png') no-repeat;
+  display: block;
+}
+
+.sprite-001 {
+  width: 50px;
+  height: 50px;
+  background-position: -5px -5px;
+}
+
+.sprite-002 {
+  width: 50px;
+  height: 50px;
+  background-position: -65px -5px;
+}
+
+.sprite-003 {
+  width: 50px;
+  height: 50px;
+  background-position: -5px -65px;
+}
+
+.sprite-004 {
+  width: 50px;
+  height: 50px;
+  background-position: -65px -65px;
+}
+
+.sprite-005 {
+  width: 50px;
+  height: 50px;
+  background-position: -125px -5px;
+}
+
+.sprite-006 {
+  width: 50px;
+  height: 50px;
+  background-position: -125px -65px;
+}
+
+input.btn__modal {
+  padding: 15px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #EEA200;
+  color: #fff;
+  border: none;
+  width: 100%;
+}
+
+.wpcf7-form .form-group input {
+  box-sizing: border-box;
+  padding: 8px;
+  outline: 0;
+  border: 1px solid #EEA200;
+  margin-bottom: 20px;
+  margin-top: 8px;
+  min-height: 35px;
+  background-color: white;
+  width: 100%;
+  &:focus {
+    box-shadow: 0 0 5px #EEA200;
+    border: 1px solid #EEA200;
+  }
+}
+
+.form-label {
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.modal-text {
+  text-align: center;
+  padding-bottom: 40px;
 }
