@@ -26,3 +26,18 @@ a {
 :focus, a:active, a:hover {
   outline: 0;
 }
+
+::selection {
+  background: #EEA200;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #EEA200;
+  color: #fff;
+}
+
+::-webkit-selection {
+  background: #EEA200;
+  color: #fff;
+}

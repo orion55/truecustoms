@@ -1,5 +1,5 @@
 .offer {
-  height: 749px;
+  height: auto;
   width: 100%;
   background: url('../img/offer/sliderf.jpg') no-repeat center;
   background-size: cover;
@@ -9,6 +9,7 @@
 
 .offer__wrap {
   padding-top: 66px;
+  padding-bottom: 66px;
 }
 
 .offer__header {
@@ -105,12 +106,87 @@ a.offer__btn--big {
   background-color: $color-yellow-black;
   display: flex;
   justify-content: center;
-  padding-bottom: 20px;
-  align-items: flex-end;
+  //padding-bottom: 20px;
+  align-items: center;
   border-radius: 10px;
 }
 
 .offer__subject {
   font-size: 17px;
   padding-top: 15px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-width: 1199px) {
+  .offer {
+    height: auto;
+  }
+  .offer__wrap {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+  .offer__header {
+    width: 100%;
+  }
+  .offer__container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .offer__work {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .offer {
+    height: auto;
+  }
+  .offer__wrap {
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+  .offer__header {
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+    padding-top: 30px;
+  }
+  .offer__box {
+    padding-bottom: 30px;
+    margin: 0 auto;
+  }
+  .offer__container {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+  }
+  .offer__title {
+    font-size: 36px;
+    width: 100%;
+  }
+  .offer__work {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  a.offer__btn--big {
+    padding: 20px 0;
+    width: 95%;
+    font-size: 21px;
+  }
+  .offer__holder {
+    padding-left: 0;
+    flex-direction: row;
+    padding-bottom: 20px;
+    width: 85%;
+  }
+  .offer__icon {
+    margin-right: 20px;
+  }
+  .offer__subject {
+    text-align: left;
+    font-size: 22px;
+    padding-top: 0;
+  }
 }

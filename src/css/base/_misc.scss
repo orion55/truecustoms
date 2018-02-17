@@ -110,3 +110,15 @@ input.btn__modal {
   text-align: center;
   padding-bottom: 40px;
 }
+
+@media only screen and (min-device-width: 768px) and (max-width: 1199px) {
+  #popmake-17 {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #popmake-17 {
+    width: 80%;
+  }
+}
