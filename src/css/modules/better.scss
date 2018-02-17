@@ -1,0 +1,121 @@
+.better {
+  height: auto;
+  width: 100%;
+  background: url('../img/better/testfon2.jpg') no-repeat center fixed;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+}
+
+.better__wrap {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 118px;
+  padding-bottom: 91px;
+}
+
+.better__title {
+  font-size: 42px;
+  padding-bottom: 69px;
+}
+
+.better__box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 66px;
+  align-items: flex-start;
+}
+
+.better__holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+
+.better__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.better__number {
+  font-size: 90px;
+  color: $color-yellow-black;
+}
+
+.better__subtitle {
+  font-size: 25px;
+  padding-bottom: 45px;
+}
+
+.better__text {
+  font-size: 14px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-width: 1199px) {
+  .better__wrap {
+    width: 100%;
+  }
+  .better__title {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  .better__box {
+    flex-wrap: wrap;
+  }
+  .better__holder {
+    //width: 50%;
+    //padding-bottom: 30px;
+    flex: 1;
+  }
+  .better__container {
+    width: 70%;
+  }
+  .better__subtitle {
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .better__wrap {
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 90px;
+  }
+  .better__title {
+    padding-bottom: 30px;
+    font-size: 32px;
+  }
+  .better__box {
+    flex-direction: column;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .better__holder {
+    flex-direction: column;
+    padding-bottom: 20px;
+    width: 100%;
+    padding-left: 0;
+  }
+  .better__number {
+    font-size: 70px;
+  }
+  .better__subtitle {
+    font-size: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .better__text {
+    text-align: center;
+    font-size: 18px;
+  }
+  .better__icon {
+    margin-right: 20px;
+  }
+  .better__container {
+    flex: 1;
+  }
+}

@@ -35,8 +35,7 @@
                     <span class="offer__text">за 6 тысяч рублей всего за 3 дня</span>
                 </h1>
                 <a href="#"
-                   class="pure-button pure-button-primary offer__btn--big hvr-sweep-to-right modal-open"
-                   onclick="this.blur(); return false">
+                   class="pure-button pure-button-primary offer__btn--big hvr-sweep-to-right modal-open modal-blur">
                     Записаться на ремонт</a>
                 <div class="offer__work">
                     <div class="offer__holder">
@@ -118,15 +117,43 @@
             <h2 class="better__title">Почему клиенты выбирают нас</h2>
             <div class="better__box">
                 <div class="better__holder">
-                    <div class="better__icon">
-                    </div>
+                    <div class="better__number">26</div>
                     <div class="better__container">
-                        <div class="better__subtitle">60 машин в месяц</div>
-                        <div class="better__text">Именно столько машин, минимум, проходит через наш автоцентр.
+                        <div class="better__subtitle">лет опыта</div>
+                        <div class="better__text">У нашего самого опытного мастера!</div>
+                    </div>
+                </div>
+                <div class="better__holder">
+                    <div class="better__number">1578</div>
+                    <div class="better__container">
+                        <div class="better__subtitle">счастливых клиентов</div>
+                        <div class="better__text">Именно такому количеству людей мы помогли за последние 3-и года нашей
+                            работы
                         </div>
                     </div>
                 </div>
+                <div class="better__holder">
+                    <div class="better__number">1760</div>
+                    <div class="better__container">
+                        <div class="better__subtitle">бамперов</div>
+                        <div class="better__text">Мы перекрасили за последние 3-и года нашей работы</div>
+                    </div>
+                </div>
             </div>
+            <a href="#"
+               class="pure-button pure-button-primary better__btn hvr-sweep-to-right modal-open modal-blur">
+                Записаться на осмотр</a>
+        </div>
+    </div>
+    <div class="repairs">
+        <div class="repairs__wrap">
+            <h2 class="repairs__title">
+                <span class="repairs__selection">Запишитесь на ремонт бампера прямо</span>
+                <span class="repairs__text">сейчас и получите скидку по промо-коду</span>
+            </h2>
+            <a href="#"
+               class="pure-button pure-button-primary repairs__btn hvr-sweep-to-right modal-promo modal-blur">
+                Получить скидку</a>
         </div>
     </div>
 <?php

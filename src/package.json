@@ -28,5 +28,7 @@
     "purecss": "^1.0.0",
     "vinyl-ftp": "^0.6.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "cocoen": "^2.0.5"
+  }
 }

@@ -74,16 +74,6 @@
   color: $color-yellow-black;
 }
 
-a.offer__btn--big {
-  text-transform: uppercase;
-  padding: 20px 80px;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 10px;
-  letter-spacing: 1.1px;
-  margin-bottom: 70px;
-}
-
 .offer__work {
   display: flex;
   flex-direction: row;
@@ -169,11 +159,6 @@ a.offer__btn--big {
     flex-direction: column;
     width: 100%;
     align-items: center;
-  }
-  a.offer__btn--big {
-    padding: 20px 0;
-    width: 95%;
-    font-size: 21px;
   }
   .offer__holder {
     padding-left: 0;
