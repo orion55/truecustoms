@@ -156,5 +156,50 @@
                 Получить скидку</a>
         </div>
     </div>
+    <div class="work">
+        <div class="work__wrap">
+            <h2 class="work__title">Несколько наших работ</h2>
+            <div class="work__container">
+                <div class="work__slider">
+                    <div class="cocoen work__cocoen">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/car01-before.jpg"
+                             alt="car01-before" class="work__img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/car01-after.jpg"
+                             alt="car01-after" class="work__img">
+                    </div>
+                    <div class="cocoen work__cocoen">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/car02-before.jpg"
+                             alt="car02-before" class="work__img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/car02-after.jpg"
+                             alt="car02-after" class="work__img">
+                    </div>
+                    <div class="cocoen work__cocoen">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/car03-before.jpg"
+                             alt="car03-before" class="work__img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/car03-after.jpg"
+                             alt="car03-after" class="work__img">
+                    </div>
+                </div>
+                <div class="work__box">
+                    <div class="work__row work__row--one">До ремонта</div>
+                    <div class="work__row work__row--two">После ремонта</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reviews">
+        <div class="reviews__wrap">
+            <div class="reviews__title">Отзывы о нас</div>
+            <div class="reviews_container">
+                <div class="reviews__slider">
+                    <div class="reviews__box">
+                        <div class="reviews__picture">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/reviews/foto.jpg" alt="" class="reviews__img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 <?php
 get_footer();

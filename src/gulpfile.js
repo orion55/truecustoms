@@ -84,13 +84,26 @@ gulp.task('fonts', function () {
         .pipe(gulp.dest(docs + 'fonts/'))
 });
 
-gulp.task('vendor-copy', function () {
-    return gulp.src('./node_modules/cocoen/dist/js/cocoen.min.js')
+gulp.task('vendor-js', function () {
+    return gulp.src(['./node_modules/cocoen/dist/js/cocoen.min.js',
+        './node_modules/cocoen/dist/js/cocoen-jquery.min.js',
+        './node_modules/slick-carousel/slick/slick.min.js'])
+        .pipe(concat('vendor.min.js'))
         .pipe(gulp.dest(docs + 'js/'))
 });
 
-gulp.task('vendor', function () {
-    gulp.src(['./node_modules/cocoen/dist/css/cocoen.min.css'])
+gulp.task('vendor-copy', function () {
+    gulp.src(['./node_modules/slick-carousel/slick/ajax-loader.gif'])
+        .pipe(gulp.dest(docs + 'css/'));
+
+    return gulp.src(['./node_modules/slick-carousel/slick/fonts/**'])
+        .pipe(gulp.dest(docs + 'css/fonts'))
+});
+
+gulp.task('vendor-css', function () {
+    gulp.src(['./node_modules/cocoen/dist/css/cocoen.min.css',
+        './node_modules/slick-carousel/slick/slick.css',
+        './node_modules/slick-carousel/slick/slick-theme.css'])
         .pipe(plumber({
             handleError: function (err) {
                 console.log(err);
@@ -140,4 +153,4 @@ gulp.task('watch', function () {
     gulp.watch('./img/**/*', ['images']);
 });
 
-gulp.task('default', ['sass', 'js', 'images', 'fonts', 'vendor', 'vendor-copy', 'watch']);
+gulp.task('default', ['sass', 'js', 'images', 'fonts', 'vendor-copy', 'vendor-css', 'vendor-js', 'watch']);

@@ -26,6 +26,7 @@
     "hover.css": "^2.2.1",
     "imagemin-pngquant": "^5.0.1",
     "purecss": "^1.0.0",
+    "slick-carousel": "^1.8.1",
     "vinyl-ftp": "^0.6.1"
   },
   "dependencies": {

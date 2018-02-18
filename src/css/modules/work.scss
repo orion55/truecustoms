@@ -1,0 +1,87 @@
+.work {
+  background-color: #454545;
+}
+
+.work__wrap {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.work__title {
+  font-size: 42px;
+  padding-bottom: 40px;
+}
+
+.work__img {
+  //width: 400px;
+  //height: 300px;
+}
+
+.work__cocoen {
+  //width: 400px;
+  //height: 300px;
+}
+
+.work__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work__box {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+}
+
+.work__row {
+  height: 35px;
+  width: 50%;
+  text-align: center;
+  padding-top: 7px;
+}
+
+.work__row--one {
+  background-color: white;
+  color: black;
+}
+
+.work__row--two {
+  background-color: $color-yellow-black;
+}
+
+.work__slider {
+  width: 400px;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media only screen and (min-device-width: 768px) and (max-width: 1199px) {
+  .work__wrap {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .work__wrap {
+    width: 100%;
+    padding: 70px 10px 90px 10px;
+  }
+  .repairs__title {
+    font-size: 36px;
+  }
+  .work__slider {
+    width: 80%;
+    height: auto;
+  }
+  .work__box {
+    width: 80%;
+  }
+}

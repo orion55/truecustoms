@@ -1,11 +1,4 @@
 jQuery(document).ready(function ($) {
-    $('.modal-blur').click(function (e) {
-        this.blur();
-        e.preventDefault();
-    });
-});
-
-jQuery(document).ready(function ($) {
     $('.cocoen').cocoen();
     $('.work__slider').slick({
         autoplay: false,

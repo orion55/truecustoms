@@ -708,6 +708,73 @@ a.better__btn {
 	color: white;
 }
 
+.work {
+	background-color: #454545;
+}
+
+.work__wrap {
+	width: 1200px;
+	margin: 0 auto;
+	padding-top: 35px;
+	padding-bottom: 35px;
+	text-align: center;
+}
+
+.work__title {
+	font-size: 42px;
+	padding-bottom: 40px;
+}
+
+.work__container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.work__box {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	width: 400px;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+}
+
+.work__row {
+	width: 50%;
+	height: 35px;
+	padding-top: 7px;
+	text-align: center;
+}
+
+.work__row--one {
+	color: black;
+	background-color: white;
+}
+
+.work__row--two {
+	background-color: #eea200;
+}
+
+.work__slider {
+	position: relative;
+	width: 400px;
+	height: 300px;
+	margin: 0 auto;
+}
+
 @media only screen and (min-device-width: 768px) and (max-width: 1199px) {
 
 #popmake-17,
@@ -790,6 +857,12 @@ a.better__btn {
 }
 
 .repairs__wrap {
+	width: 100%;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.work__wrap {
 	width: 100%;
 	padding-right: 10px;
 	padding-left: 10px;
@@ -990,6 +1063,24 @@ a.repairs__btn {
 
 .repairs__title {
 	font-size: 36px;
+}
+
+.work__wrap {
+	width: 100%;
+	padding: 70px 10px 90px 10px;
+}
+
+.repairs__title {
+	font-size: 36px;
+}
+
+.work__slider {
+	width: 80%;
+	height: auto;
+}
+
+.work__box {
+	width: 80%;
 }
 
 }
