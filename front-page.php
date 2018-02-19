@@ -202,9 +202,13 @@
                         </div>
                         <div class="reviews__wrapper">
                             <div class="reviews__col reviews__col--one">
-                                <div class="reviews__cocoen">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/car01-before.jpg"
+                                <div class="reviews__cocoen reviews__coc">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/reviews/car01-before.jpg"
                                          alt="car01-before" class="work__img">
+                                </div>
+                                <div class="reviews__cube">
+                                    <div class="reviews__row work__row--one">До ремонта</div>
+                                    <div class="reviews__row work__row--two">После ремонта</div>
                                 </div>
                             </div>
                             <div class="reviews__col reviews__col--two">
@@ -236,6 +240,8 @@
                                 </div>
                             </div>
                         </div>
+                        <i class="fas fa-quote-left reviews__quote-left fa-4x"></i>
+                        <i class="fas fa-quote-right reviews__quote-right fa-4x"></i>
                     </div>
                 </div>
             </div>

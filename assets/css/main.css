@@ -746,7 +746,7 @@ a.better__btn {
 	display: -ms-flexbox;
 	display: flex;
 	flex-direction: row;
-	width: 400px;
+	width: 1200px;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: row;
@@ -770,8 +770,8 @@ a.better__btn {
 
 .work__slider {
 	position: relative;
-	width: 400px;
-	height: 300px;
+	width: 1200px;
+	height: 400px;
 	margin: 0 auto;
 }
 
@@ -828,9 +828,24 @@ a.better__btn {
 }
 
 .reviews__holder {
+	position: relative;
 	padding: 20px;
 	border-radius: 30px;
 	background-color: #eaeaea;
+}
+
+.reviews__quote-right {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	color: #dcdcdc;
+}
+
+.reviews__quote-left {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	color: #dcdcdc;
 }
 
 .reviews__col--two {
@@ -859,12 +874,19 @@ a.better__btn {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	flex-direction: column;
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
 	-webkit-box-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 
 .reviews__col--two {
@@ -886,6 +908,38 @@ a.better__btn {
 	margin-left: 0;
 	content: '•';
 	color: #eea200;
+}
+
+.reviews__cube {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	width: 400px;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+}
+
+.reviews__row {
+	width: 50%;
+	height: 35px;
+	padding-top: 7px;
+	text-align: center;
+}
+
+.reviews__row--one {
+	color: black;
+	background-color: white;
+}
+
+.reviews__row--two {
+	background-color: #eea200;
+}
+
+.reviews__coc {
+	width: 400px;
+	height: 300px;
 }
 
 @media only screen and (min-device-width: 768px) and (max-width: 1199px) {
@@ -979,6 +1033,15 @@ a.better__btn {
 	width: 100%;
 	padding-right: 10px;
 	padding-left: 10px;
+}
+
+.work__slider {
+	width: 80%;
+	height: auto;
+}
+
+.work__box {
+	width: 80%;
 }
 
 }
