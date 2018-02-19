@@ -206,28 +206,52 @@
                         ?>
                         <div class="reviews__holder">
                             <div class="reviews__box">
-                                <div class="reviews__picture">
-                                    <?php $title = get_the_title(); ?>
-                                    <?php echo types_render_field( "customer_photos", array(
-                                        "alt"   => $title,
-                                        "class" => "reviews__img"
-                                    ) ); ?>
-                                </div>
-                                <div class="reviews__name">Владимир<span class="reviews__age"> , 37 лет</span></div>
+                                <?php $title = get_the_title();
+                                $customer_photos = types_render_field("customer_photos", array(
+                                    "alt" => $title,
+                                    "class" => "reviews__img"
+                                ));
+                                if (!empty($customer_photos)) : ?>
+                                    <div class="reviews__picture">
+                                        <?php echo $customer_photos ?>
+                                    </div>
+                                <?php endif;
+                                $name = types_render_field("name");
+                                $name = trim($name);
+                                $age = types_render_field("age");
+                                $age = trim($age);
+                                if (!empty($name)) : ?>
+                                    <div class="reviews__name">
+                                        <?php echo $name; ?>
+                                        <?php if (!empty($age)) : $age = " , " . $age . " лет"; ?>
+                                            <span class="reviews__age"><?php echo $age ?></span>
+                                        <?php endif; ?>
+                                    </div>
+                                <?php endif; ?>
                             </div>
                             <div class="reviews__wrapper">
-                                <div class="reviews__col reviews__col--one">
-                                    <div class="cocoen reviews__coc">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/reviews/car01-before.jpg"
-                                             alt="car01-before">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/reviews/car01-after.jpg"
-                                             alt="car01-after">
+                                <?php
+                                $damaged_car = types_render_field("damaged_car", array(
+                                    "alt" => 'car-before',
+                                    "class" => "reviews__img--car"
+                                ));
+                                $finished_car = types_render_field("finished_car", array(
+                                    "alt" => 'car-after',
+                                    "class" => "reviews__img--car"
+                                ));
+                                if (!(empty($damaged_car) && empty($finished_car))) :
+                                    ?>
+                                    <div class="reviews__col reviews__col--one">
+                                        <div class="cocoen reviews__coc">
+                                            <?php if (!empty($damaged_car)) : echo $damaged_car; endif; ?>
+                                            <?php if (!empty($finished_car)) : echo $finished_car; endif; ?>
+                                        </div>
+                                        <div class="reviews__cube">
+                                            <div class="reviews__row work__row--one">До ремонта</div>
+                                            <div class="reviews__row work__row--two">После ремонта</div>
+                                        </div>
                                     </div>
-                                    <div class="reviews__cube">
-                                        <div class="reviews__row work__row--one">До ремонта</div>
-                                        <div class="reviews__row work__row--two">После ремонта</div>
-                                    </div>
-                                </div>
+                                <?php endif; ?>
                                 <div class="reviews__col reviews__col--two">
                                     <div class="reviews__label">Марка авто</div>
                                     <div class="reviews__text">Volkswagen Golf 3</div>
