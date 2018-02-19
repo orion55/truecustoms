@@ -9,21 +9,21 @@
                     </div>
                     <div class="offer__desc">Ремонт и покраска бамперов</div>
                 </div>
-				<?php $truecustoms_options = get_option( 'truecustoms_option_name' );
-				$address                   = $truecustoms_options['_0']; // Адрес
-				$phone                     = $truecustoms_options['_1']; // Телефон ?>
+                <?php $truecustoms_options = get_option('truecustoms_option_name');
+                $address = $truecustoms_options['_0']; // Адрес
+                $phone = $truecustoms_options['_1']; // Телефон ?>
                 <div class="offer__box offer__box--two">
                     <div class="offer__address">
-						<?php if ( empty( $address ) ): echo 'г. Екатеринбург, ул. Лукиных, 1а'; else: echo $address; endif; ?>
+                        <?php if (empty($address)): echo 'г. Екатеринбург, ул. Лукиных, 1а'; else: echo $address; endif; ?>
                     </div>
                 </div>
                 <div class="offer__box offer__box--three">
                     <div class="offer__phone">
-						<?php $phone_href = '+73433725517';
-						$phone_text       = '+7 (343) 372-55-17';
-						if ( ! empty( $phone ) ): $phone_href = preg_replace( "/[^0-9+]+/i", "", $phone );
-							$phone_text                       = $phone;
-						endif; ?>
+                        <?php $phone_href = '+73433725517';
+                        $phone_text = '+7 (343) 372-55-17';
+                        if (!empty($phone)): $phone_href = preg_replace("/[^0-9+]+/i", "", $phone);
+                            $phone_text = $phone;
+                        endif; ?>
                         <a href="tel:<?php echo $phone_href ?>" class="offer__link"><?php echo $phone_text ?></a>
                     </div>
                 </div>
@@ -192,57 +192,81 @@
             <div class="reviews__title">Отзывы о нас</div>
             <div class="reviews_container">
                 <div class="reviews__slider">
-                    <div class="reviews__holder">
-                        <div class="reviews__box">
-                            <div class="reviews__picture">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/reviews/foto.jpg"
-                                     alt="" class="reviews__img">
+                    <?php
+                    global $post;
+                    $args = array(
+                        'numberposts' => 10,
+                        'orderby' => 'title',
+                        'order' => 'ASC',
+                        'post_type' => 'review'
+                    );
+                    $myposts = get_posts($args);
+                    foreach ($myposts as $post) {
+                        setup_postdata($post);
+                        ?>
+                        <div class="reviews__holder">
+                            <div class="reviews__box">
+                                <div class="reviews__picture">
+                                    <?php $title = get_the_title(); ?>
+                                    <?php echo types_render_field( "customer_photos", array(
+                                        "alt"   => $title,
+                                        "class" => "reviews__img"
+                                    ) ); ?>
+                                </div>
+                                <div class="reviews__name">Владимир<span class="reviews__age"> , 37 лет</span></div>
                             </div>
-                            <div class="reviews__name">Владимир<span class="reviews__age"> , 37 лет</span></div>
-                        </div>
-                        <div class="reviews__wrapper">
-                            <div class="reviews__col reviews__col--one">
-                                <div class="reviews__cocoen reviews__coc">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/reviews/car01-before.jpg"
-                                         alt="car01-before" class="work__img">
+                            <div class="reviews__wrapper">
+                                <div class="reviews__col reviews__col--one">
+                                    <div class="cocoen reviews__coc">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/reviews/car01-before.jpg"
+                                             alt="car01-before">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/reviews/car01-after.jpg"
+                                             alt="car01-after">
+                                    </div>
+                                    <div class="reviews__cube">
+                                        <div class="reviews__row work__row--one">До ремонта</div>
+                                        <div class="reviews__row work__row--two">После ремонта</div>
+                                    </div>
                                 </div>
-                                <div class="reviews__cube">
-                                    <div class="reviews__row work__row--one">До ремонта</div>
-                                    <div class="reviews__row work__row--two">После ремонта</div>
-                                </div>
-                            </div>
-                            <div class="reviews__col reviews__col--two">
-                                <div class="reviews__label">Марка авто</div>
-                                <div class="reviews__text">Volkswagen Golf 3</div>
-                                <div class="reviews__label">Список работ</div>
-                                <div class="reviews__text">
-                                    <ul>
-                                        <li>вытягивание</li>
-                                        <li>сшивание</li>
-                                        <li>покраска</li>
-                                    </ul>
-                                </div>
+                                <div class="reviews__col reviews__col--two">
+                                    <div class="reviews__label">Марка авто</div>
+                                    <div class="reviews__text">Volkswagen Golf 3</div>
+                                    <div class="reviews__label">Список работ</div>
+                                    <div class="reviews__text">
+                                        <ul>
+                                            <li>вытягивание</li>
+                                            <li>сшивание</li>
+                                            <li>покраска</li>
+                                        </ul>
+                                    </div>
 
-                            </div>
-                            <div class="reviews__col reviews__col--three">
-                                <div class="reviews__text">
-                                    <p>Сервис порекомендовал знакомый.</p>
-                                    <p>При осмотре машину помыли экспрессом, к слову сказать, даже денег не взяли,
-                                        быстро посчитали назвали стоимость. Думал ждать придется очереди на ремонт.
-                                        Предложили оставить прямо сейчас, а через три дня звонок, приходите забирайте
-                                        вашу ласточку!!! Думал на месяц растянется ремонт а они вон че. Ну все, думаю,
-                                        как-нибудь слепили, кисточкой покрасили, приготовился расстраиваться.
-                                        Выкатывают, осматриваю, к большому моему удивлению даже не смог найти где чего
-                                        было!!! Приятель научил как “шагрень” смотреть. Смотрел смотрел, знаю что
-                                        ремонтировали, а она как в день когда с салона забирали всей семьей. И гарантию
-                                        дали пожизненную.</p>
-                                    <p>В общем умеют ребята работать. Пять с тремя плюсами!!!</p>
+                                </div>
+                                <div class="reviews__col reviews__col--three">
+                                    <div class="reviews__text">
+                                        <p>Сервис порекомендовал знакомый.</p>
+                                        <p>При осмотре машину помыли экспрессом, к слову сказать, даже денег не взяли,
+                                            быстро посчитали назвали стоимость. Думал ждать придется очереди на ремонт.
+                                            Предложили оставить прямо сейчас, а через три дня звонок, приходите
+                                            забирайте
+                                            вашу ласточку!!! Думал на месяц растянется ремонт а они вон че. Ну все,
+                                            думаю,
+                                            как-нибудь слепили, кисточкой покрасили, приготовился расстраиваться.
+                                            Выкатывают, осматриваю, к большому моему удивлению даже не смог найти где
+                                            чего
+                                            было!!! Приятель научил как “шагрень” смотреть. Смотрел смотрел, знаю что
+                                            ремонтировали, а она как в день когда с салона забирали всей семьей. И
+                                            гарантию
+                                            дали пожизненную.</p>
+                                        <p>В общем умеют ребята работать. Пять с тремя плюсами!!!</p>
+                                    </div>
                                 </div>
                             </div>
+                            <i class="fas fa-quote-left reviews__quote-left fa-4x"></i>
+                            <i class="fas fa-quote-right reviews__quote-right fa-4x"></i>
                         </div>
-                        <i class="fas fa-quote-left reviews__quote-left fa-4x"></i>
-                        <i class="fas fa-quote-right reviews__quote-right fa-4x"></i>
-                    </div>
+                    <?php }
+                    wp_reset_postdata();
+                    ?>
                 </div>
             </div>
         </div>
