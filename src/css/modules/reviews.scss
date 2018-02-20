@@ -50,6 +50,7 @@
   border-radius: 30px;
   position: relative;
   margin-bottom: 5px;
+  z-index: 0;
 }
 
 .reviews__quote-right {
@@ -57,6 +58,7 @@
   right: 20px;
   bottom: 20px;
   color: #DCDCDC;
+  z-index: -1;
 }
 
 .reviews__quote-left {
@@ -64,10 +66,7 @@
   left: 20px;
   top: 20px;
   color: #DCDCDC;
-}
-
-.reviews__col--two {
-  text-align: left;
+  z-index: -1;
 }
 
 .reviews__label {
@@ -100,7 +99,7 @@
   text-align: left;
   padding-left: 25px;
   padding-right: 25px;
-  //flex: 1;
+  flex: 1;
 }
 
 .reviews__col--three {
@@ -141,4 +140,57 @@
 .reviews__coc {
   width: 400px;
   height: 300px;
+}
+
+.reviews__slider {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+
+.reviews__slider .slick-next:before, .reviews__slider .slick-prev:before {
+  color: #DCDCDC;
+}
+
+@media only screen and (min-device-width: 768px) and (max-width: 1199px) {
+  .reviews__wrap {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .reviews__slider {
+    width: 80%;
+    height: auto;
+  }
+  .reviews__box {
+    //width: 80%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .reviews__wrap {
+    width: 100%;
+    padding: 70px 10px 90px 10px;
+  }
+  .repairs__title {
+    font-size: 36px;
+  }
+  .reviews__slider {
+    width: 80%;
+    height: auto;
+  }
+  .reviews__box {
+    //width: 80%;
+  }
+  .reviews__wrapper {
+    flex-direction: column;
+  }
+  .reviews__coc {
+    width: 100%;
+    height: auto;
+  }
+  .reviews__cube {
+    width: 100%;
+  }
 }
