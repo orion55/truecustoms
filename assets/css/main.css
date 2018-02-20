@@ -414,9 +414,8 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 	text-decoration: none;
 	color: #444; /* rgba not supported (IE 8) */
 	color: rgba(0, 0, 0, .8); /* rgba supported */
-	border: 1px solid #999; /*IE 6/7/8*/
-	border: none transparent;
-	border-radius: 2px; /*IE9 + everything else*/
+	border: 1px solid #999;
+	border-radius: 2px; /*IE 6/7/8*/
 	background-color: #e6e6e6;
 }
 
@@ -519,6 +518,14 @@ a.reviews__btn {
 }
 
 a.reviews__btn:hover {
+	border: solid 1px #eea200;
+}
+
+a.timeline__btm--plus {
+	margin-top: 20px;
+}
+
+a.timeline__btm--plus:before {
 	border: solid 1px #eea200;
 }
 
@@ -722,6 +729,7 @@ a.reviews__btn:hover {
 }
 
 .work {
+	display: none;
 	background-color: #454545;
 }
 
@@ -789,6 +797,7 @@ a.reviews__btn:hover {
 }
 
 .reviews {
+	display: none;
 	color: #262626;
 	background-color: #fcfcfc;
 }
@@ -992,25 +1001,7 @@ a.reviews__btn:hover {
 }
 
 .timeline_items {
-	position: relative;
-	margin: 0 !important;
 	padding-top: 9px;
-	background: url('../img/timeline/timeline_top.png') no-repeat top center;
-}
-
-.timeline_items:after {
-	position: absolute;
-	z-index: 1;
-	bottom: -10px;
-	left: 50%;
-	display: block;
-	width: 0;
-	height: 0;
-	margin-left: -3px;
-	content: '';
-	border-width: 3px;
-	border-style: solid;
-	border-radius: 100%;
 }
 
 .timeline_items li {
@@ -1041,15 +1032,14 @@ a.reviews__btn:hover {
 .timeline_items li h3:before {
 	position: absolute;
 	z-index: 1;
-	top: 11px;
+	top: 10px;
 	left: 50%;
 	display: block;
-	width: 7px;
-	height: 7px;
-	margin-left: -8px;
+	width: 15px;
+	height: 15px;
+	margin-left: -7px;
 	content: '';
-	border-width: 4px;
-	border-style: solid;
+	border: #eea200 solid 4px;
 	border-radius: 100%;
 }
 
@@ -1062,28 +1052,53 @@ a.reviews__btn:hover {
 	left: 55%;
 }
 
-.timeline_items li .desc { /* position: relative;
-  font-size: 15px;
-  line-height: 31px;
-  background: url('../img/timeline/textline.png') repeat-y*/
-}
-
-.timeline_items li .desc:before { /*content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: -122%;
-  top: 0;
-  background-image: url('../img/timeline/stripes_10_b.png')*/
-}
-
-.timeline_items li:nth-child(even) .desc:before {
-	right: -122%;
-	left: auto;
-}
-
 .timeline_items li:nth-child(even) .desc {
 	text-align: right;
+}
+
+.timeline_items li:nth-child(odd) .desc {
+	text-align: left;
+}
+
+.address {
+	color: white;
+	background-color: #454545;
+}
+
+.address__wrap {
+	width: 1200px;
+	margin: 0 auto;
+	padding-top: 66px;
+	padding-bottom: 66px;
+	text-align: center;
+}
+
+.address__title {
+	font-size: 42px;
+	padding-bottom: 60px;
+}
+
+.address__box {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+}
+
+.address__map {
+	width: 60%;
+	height: 304px;
+}
+
+.address__info {
+	width: 40%;
+	height: 304px;
+	padding-top: 147px;
+	padding-left: 139px;
+	background: url(../img/address/background.jpg) left top;
 }
 
 @media only screen and (min-device-width: 768px) and (max-width: 1199px) {
@@ -1114,6 +1129,11 @@ a.reviews__btn:hover {
 
 .offer__work {
 	width: 100%;
+}
+
+a.timeline__btm--plus {
+	width: 100%;
+	padding: 20px 40px;
 }
 
 .opportunity__wrap {
@@ -1232,6 +1252,12 @@ a.reviews__btn:hover {
 	font-size: 3em;
 }
 
+.timeline__wrap {
+	width: 100%;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -1315,6 +1341,13 @@ a.reviews__btn {
 	font-size: 21px;
 	width: 95%;
 	padding: 20px 0;
+}
+
+a.timeline__btm--plus {
+	font-size: 20px;
+	width: 100%;
+	margin-top: 40px;
+	margin-bottom: 15px;
 }
 
 .opportunity__wrap {
@@ -1493,6 +1526,38 @@ a.reviews__btn {
 
 .reviews__holder svg.fa-4x {
 	font-size: 2em;
+}
+
+.timeline__wrap {
+	width: 100%;
+	padding-right: 20px;
+	padding-left: 10px;
+}
+
+.timeline_items li {
+	padding: 0 0 25px 10%;
+	background: none;
+}
+
+.timeline_items li:nth-child(even) {
+	padding: 0 0 25px 10%;
+	background: none;
+}
+
+.timeline_items li h3:before {
+	left: 4%;
+}
+
+.timeline_items li:nth-child(even) h3 {
+	text-align: left;
+}
+
+.timeline_items li:nth-child(even) .desc {
+	text-align: left;
+}
+
+.timeline_items li h3 {
+	font-size: 25px;
 }
 
 }

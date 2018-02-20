@@ -1,0 +1,35 @@
+.address {
+  background-color: #454545;
+  color: white;
+}
+
+.address__wrap {
+  width: 1200px;
+  padding-top: 66px;
+  padding-bottom: 66px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.address__title {
+  font-size: 42px;
+  padding-bottom: 60px;
+}
+
+.address__box {
+  display: flex;
+  flex-direction: row;
+}
+
+.address__map {
+  width: 60%;
+  height: 304px;
+}
+
+.address__info {
+  height: 304px;
+  background: url(../img/address/background.jpg) left top;
+  padding-left: 139px;
+  padding-top: 147px;
+  width: 40%;
+}

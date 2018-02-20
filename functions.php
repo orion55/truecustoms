@@ -138,6 +138,7 @@ function truecustoms_scripts()
         wp_enqueue_script('comment-reply');
     }
     wp_enqueue_script('truecustoms-fontawesome', get_template_directory_uri() . '/js/fontawesome-all.min.js', [], '', true);
+    wp_enqueue_script('truecustoms-map', 'https://api-maps.yandex.ru/2.1/?lang=ru_RU', [], '', true);
     wp_enqueue_script('jquery');
     wp_enqueue_script('truecustoms-cocoen', get_template_directory_uri() . '/assets/js/vendor.min.js', array('jquery'), '', true);
     wp_enqueue_script('truecustoms-main', get_template_directory_uri() . '/assets/js/main.min.js', array('jquery'), '', true);

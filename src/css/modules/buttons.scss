@@ -56,7 +56,6 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   color: #444; /* rgba not supported (IE 8) */
   color: rgba(0, 0, 0, 0.80); /* rgba supported */
   border: 1px solid #999; /*IE 6/7/8*/
-  border: none rgba(0, 0, 0, 0); /*IE9 + everything else*/
   background-color: #E6E6E6;
   text-decoration: none;
   border-radius: 2px;
@@ -164,8 +163,18 @@ a.reviews__btn {
   }
 }
 
-@media only screen and (min-device-width: 768px) and (max-width: 1199px) {
+a.timeline__btm--plus {
+  margin-top: 20px;
+  &:before {
+    border: solid 1px $color-yellow-black;
+  }
+}
 
+@media only screen and (min-device-width: 768px) and (max-width: 1199px) {
+  a.timeline__btm--plus {
+    width: 100%;
+    padding: 20px 40px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -173,5 +182,11 @@ a.reviews__btn {
     padding: 20px 0;
     width: 95%;
     font-size: 21px;
+  }
+  a.timeline__btm--plus {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 20px;
   }
 }

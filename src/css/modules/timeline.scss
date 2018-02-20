@@ -17,25 +17,7 @@
 }
 
 .timeline_items {
-  margin: 0 !important;
-  position: relative;
-  background: url('../img/timeline/timeline_top.png') no-repeat top center;
   padding-top: 9px
-}
-
-.timeline_items:after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-width: 3px;
-  border-style: solid;
-  border-radius: 100%;
-  position: absolute;
-  left: 50%;
-  bottom: -10px;
-  margin-left: -3px;
-  display: block;
-  z-index: 1
 }
 
 .timeline_items li {
@@ -66,17 +48,16 @@
 
 .timeline_items li h3:before {
   content: "";
-  width: 7px;
-  height: 7px;
-  border-width: 4px;
-  border-style: solid;
+  width: 15px;
+  height: 15px;
+  border: #eea200 solid 4px;
   border-radius: 100%;
   position: absolute;
   left: 50%;
-  top: 11px;
-  margin-left: -8px;
+  top: 10px;
+  margin-left: -7px;
   display: block;
-  z-index: 1
+  z-index: 1;
 }
 
 .timeline_items li:nth-child(even) h3 {
@@ -88,28 +69,46 @@
   right: auto
 }
 
-.timeline_items li .desc {
- /* position: relative;
-  font-size: 15px;
-  line-height: 31px;
-  background: url('../img/timeline/textline.png') repeat-y*/
-}
-
-.timeline_items li .desc:before {
-  /*content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: -122%;
-  top: 0;
-  background-image: url('../img/timeline/stripes_10_b.png')*/
-}
-
-.timeline_items li:nth-child(even) .desc:before {
-  left: auto;
-  right: -122%
-}
-
 .timeline_items li:nth-child(even) .desc {
   text-align: right
+}
+
+.timeline_items li:nth-child(odd) .desc {
+  text-align: left
+}
+
+@media only screen and (min-device-width: 768px) and (max-width: 1199px) {
+  .timeline__wrap {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .timeline__wrap {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+  .timeline_items li {
+    background: none;
+    padding: 0 0 25px 10%;
+  }
+  .timeline_items li:nth-child(even) {
+    background: none;
+    padding: 0 0 25px 10%;
+  }
+  .timeline_items li h3:before {
+    left: 4%;
+  }
+  .timeline_items li:nth-child(even) h3 {
+    text-align: left;
+  }
+  .timeline_items li:nth-child(even) .desc {
+    text-align: left;
+  }
+  .timeline_items li h3{
+    font-size: 25px;
+  }
 }
