@@ -3,7 +3,7 @@
 }
 
 .work__wrap {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   padding-top: 35px;
@@ -35,7 +35,7 @@
 .work__box {
   display: flex;
   flex-direction: row;
-  width: 1200px;
+  width: 95%;
 }
 
 .work__row {
@@ -55,8 +55,8 @@
 }
 
 .work__slider {
-  width: 1200px;
-  height: 400px;
+  width: 95%;
+  height: auto;
   margin: 0 auto;
   position: relative;
 }
@@ -68,11 +68,11 @@
     padding-right: 10px;
   }
   .work__slider {
-    width: 80%;
+    width: 90%;
     height: auto;
   }
   .work__box {
-    width: 80%;
+    width: 90%;
   }
 }
 

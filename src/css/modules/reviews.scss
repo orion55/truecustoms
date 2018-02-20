@@ -153,6 +153,10 @@
   color: #DCDCDC;
 }
 
+.reviews_container {
+  padding-bottom: 40px;
+}
+
 @media only screen and (min-device-width: 768px) and (max-width: 1199px) {
   .reviews__wrap {
     width: 100%;
@@ -160,28 +164,8 @@
     padding-right: 10px;
   }
   .reviews__slider {
-    width: 80%;
+    width: 85%;
     height: auto;
-  }
-  .reviews__box {
-    //width: 80%;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .reviews__wrap {
-    width: 100%;
-    padding: 70px 10px 90px 10px;
-  }
-  .repairs__title {
-    font-size: 36px;
-  }
-  .reviews__slider {
-    width: 80%;
-    height: auto;
-  }
-  .reviews__box {
-    //width: 80%;
   }
   .reviews__wrapper {
     flex-direction: column;
@@ -192,5 +176,55 @@
   }
   .reviews__cube {
     width: 100%;
+  }
+  .reviews__col--one {
+    padding-bottom: 20px;
+  }
+  .reviews__col--two {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .reviews__row {
+    font-size: 12px;
+  }
+  .reviews__holder svg.fa-4x {
+    font-size: 3em;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .reviews__wrap {
+    width: 100%;
+    padding: 70px 10px 40px 10px;
+  }
+  .repairs__title {
+    font-size: 36px;
+  }
+  .reviews__slider {
+    width: 85%;
+    height: auto;
+  }
+  .reviews__wrapper {
+    flex-direction: column;
+  }
+  .reviews__coc {
+    width: 100%;
+    height: auto;
+  }
+  .reviews__cube {
+    width: 100%;
+  }
+  .reviews__col--one {
+    padding-bottom: 20px;
+  }
+  .reviews__col--two {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .reviews__row {
+    font-size: 12px;
+  }
+  .reviews__holder svg.fa-4x {
+    font-size: 2em;
   }
 }

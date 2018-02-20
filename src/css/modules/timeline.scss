@@ -1,0 +1,115 @@
+.timeline {
+  background-color: #FCFCFC;
+  color: #444444;
+}
+
+.timeline__wrap {
+  width: 1200px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.timeline__title {
+  font-size: 42px;
+  padding-bottom: 40px;
+}
+
+.timeline_items {
+  margin: 0 !important;
+  position: relative;
+  background: url('../img/timeline/timeline_top.png') no-repeat top center;
+  padding-top: 9px
+}
+
+.timeline_items:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  margin-left: -3px;
+  display: block;
+  z-index: 1
+}
+
+.timeline_items li {
+  margin: 0 !important;
+  list-style: none !important;
+  //width: 45%;
+  padding: 0 0 25px 55%;
+  position: relative;
+  background: url('../img/timeline/timeline_right.png') no-repeat top center
+}
+
+.timeline_items li:nth-child(even) {
+  padding: 0 55% 25px 0;
+  background: url('../img/timeline/timeline_left.png') no-repeat top center
+}
+
+.timeline_items li h3 {
+  font-size: 30px;
+  line-height: 35px;
+  text-align: left;
+}
+
+.timeline_items li h3 span {
+  position: absolute;
+  right: 55%;
+  top: 8px
+}
+
+.timeline_items li h3:before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 100%;
+  position: absolute;
+  left: 50%;
+  top: 11px;
+  margin-left: -8px;
+  display: block;
+  z-index: 1
+}
+
+.timeline_items li:nth-child(even) h3 {
+  text-align: right
+}
+
+.timeline_items li:nth-child(even) h3 span {
+  left: 55%;
+  right: auto
+}
+
+.timeline_items li .desc {
+ /* position: relative;
+  font-size: 15px;
+  line-height: 31px;
+  background: url('../img/timeline/textline.png') repeat-y*/
+}
+
+.timeline_items li .desc:before {
+  /*content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: -122%;
+  top: 0;
+  background-image: url('../img/timeline/stripes_10_b.png')*/
+}
+
+.timeline_items li:nth-child(even) .desc:before {
+  left: auto;
+  right: -122%
+}
+
+.timeline_items li:nth-child(even) .desc {
+  text-align: right
+}

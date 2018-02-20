@@ -10,7 +10,7 @@ jQuery(document).ready(function ($) {
         infinite: true,
         arrows: true
     });
-    $('.reviews__slider123').slick({
+    $('.reviews__slider').slick({
         lazyLoad: 'ondemand',
         autoplay: false,
         autoplaySpeed: 10000,

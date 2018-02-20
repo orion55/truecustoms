@@ -176,6 +176,32 @@
             </div>
         </div>
     </div>
+
+    <div class="timeline">
+        <div class="timeline__wrap">
+            <h2 class="timeline__title">Как мы работаем</h2>
+            <div class="timeline__container">
+                <ul class="timeline_items">
+                    <li><h3>Вы записываетесь к нам в центр</h3>
+                        <div class="desc"><a href="#popup-5a8c11a6e9d9b" rel="lightbox"
+                                             class="popup-link button button_js" data-type="inline"><span
+                                        class="button_label">Записаться на осмотр</span></a>
+                        </div>
+                    </li>
+                    <li><h3>Мы проводим осмотр и называем стоимость работ - 6000 рублей</h3>
+                        <div class="desc"><a href="#popup-5a8c11a6ea781" rel="lightbox"
+                                             class="popup-link button button_js" data-type="inline"><span
+                                        class="button_label">Хочу дешевле!</span></a>
+                        </div>
+                    </li>
+                    <li><h3>Мы подготавливаем ваш бампер</h3></li>
+                    <li><h3>Делаем все необходимые работы и устанавливаем бампер на место.</h3></li>
+                    <li><h3>Через 3 дня вы забираете авто с "новеньким" бампером</h3></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div class="repairs">
         <div class="repairs__wrap">
             <h2 class="repairs__title">
@@ -282,6 +308,9 @@
 					?>
                 </div>
             </div>
+            <a href="#"
+               class="pure-button pure-button-primary reviews__btn hvr-sweep-to-right modal-open modal-blur">
+                Записаться на ремонт</a>
         </div>
     </div>
 <?php
