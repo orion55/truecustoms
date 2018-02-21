@@ -17,19 +17,103 @@
 }
 
 .address__box {
+  position: relative;
+}
+
+.address__map {
+  width: 100%;
+  height: 355px;
+}
+
+.address__info {
+  position: absolute;
+  background-color: #EEA200;
+  right: 20px;
+  top: 45px;
+  padding: 20px;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    width: 0;
+    height: 0;
+    border-top: 30px solid $color-yellow-black;
+    border-right: 30px solid transparent;
+  }
+}
+
+.address__head {
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+.address__city {
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.address__phone {
+  text-align: left;
+}
+
+.address__wrapper {
   display: flex;
   flex-direction: row;
 }
 
-.address__map {
-  width: 60%;
-  height: 304px;
+.address__holder {
+  padding-left: 10px;
 }
 
-.address__info {
-  height: 304px;
-  background: url(../img/address/background.jpg) left top;
-  padding-left: 139px;
-  padding-top: 147px;
-  width: 40%;
+.address__marker svg.fa-map-marker-alt {
+  font-size: 1.5em;
+}
+
+.address__link {
+  color: white;
+  font-size: 17px;
+  transition: color .5s ease-in-out;
+  &:hover {
+    color: darken(white, 10%);
+  }
+}
+
+.address__picture {
+  height: 94px;
+  width: 263px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.address__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (min-device-width: 768px) and (max-width: 1199px) {
+  .address__wrap {
+    width: 100%;
+  }
+  .address__box {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .address__wrap {
+    width: 100%;
+  }
+  .address__box {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .address__info {
+    position: static;
+  }
 }

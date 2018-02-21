@@ -319,10 +319,22 @@
                 <div class="address__map" id="map"></div>
                 <div class="address__info">
                     <div class="address__block">
+                        <div class="address__picture">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/address/facade.jpg"
+                                 alt="facade" class="address__img">
+                        </div>
                         <div class="address__head">Наши контакты</div>
-                        <div class="address__city"><?php if (empty($address)): echo 'г. Екатеринбург, ул. Лукиных, 1а'; else: echo $address; endif; ?></div>
-                        <div class="address__phone"><a href="tel:<?php echo $phone_href ?>"
-                                                       class="address__link"><?php echo $phone_text ?></a></div>
+                        <div class="address__wrapper">
+                            <div class="address__marker">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="address__holder">
+                                <div class="address__city"><?php if (empty($address)): echo 'г. Екатеринбург, ул. Лукиных, 1а'; else: echo $address; endif; ?>
+                                </div>
+                                <div class="address__phone"><a href="tel:<?php echo $phone_href ?>"
+                                                               class="address__link"><?php echo $phone_text ?></a></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
