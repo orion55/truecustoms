@@ -87,7 +87,8 @@ gulp.task('fonts', function () {
 gulp.task('vendor-js', function () {
     return gulp.src(['./node_modules/cocoen/dist/js/cocoen.min.js',
         './node_modules/cocoen/dist/js/cocoen-jquery.min.js',
-        './node_modules/slick-carousel/slick/slick.min.js'])
+        './node_modules/slick-carousel/slick/slick.min.js',
+        './node_modules/aos/dist/aos.js'])
         .pipe(concat('vendor.min.js'))
         .pipe(gulp.dest(docs + 'js/'))
 });
@@ -103,7 +104,8 @@ gulp.task('vendor-copy', function () {
 gulp.task('vendor-css', function () {
     gulp.src(['./node_modules/cocoen/dist/css/cocoen.min.css',
         './node_modules/slick-carousel/slick/slick.css',
-        './node_modules/slick-carousel/slick/slick-theme.css'])
+        './node_modules/slick-carousel/slick/slick-theme.css',
+        './node_modules/aos/dist/aos.css'])
         .pipe(plumber({
             handleError: function (err) {
                 console.log(err);

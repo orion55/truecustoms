@@ -1,3 +1,6 @@
+AOS.init({
+    easing: 'ease-in-out-sine'
+});
 jQuery(document).ready(function ($) {
     ymaps.ready(init);
     var myMap,
