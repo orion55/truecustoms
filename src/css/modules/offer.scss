@@ -56,6 +56,8 @@
 .offer__link {
   color: $color-yellow-black;
   transition: all ease-in-out 0.5s;
+  font-size: 23px;
+  font-weight: bold;
   &:hover {
     color: darken($color-yellow-black, 5%);
   }

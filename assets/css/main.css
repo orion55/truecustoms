@@ -7,7 +7,7 @@
 
 body {
 	font-family: 'RobotoSlabRegular', 'Arial', sans-serif;
-	font-size: 15px;
+	font-size: 16px;
 	color: white;
 	background-color: #454545;
 }
@@ -281,6 +281,8 @@ input.btn__modal {
 }
 
 .offer__link {
+	font-size: 23px;
+	font-weight: bold;
 	-webkit-transition: all ease-in-out .5s;
 	transition: all ease-in-out .5s;
 	color: #eea200;
@@ -567,7 +569,7 @@ a.timeline__btm--plus:before {
 	display: -ms-flexbox;
 	display: flex;
 	flex-direction: column;
-	width: 200px;
+	width: 250px;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
@@ -602,7 +604,7 @@ a.timeline__btm--plus:before {
 }
 
 .opportunity__text {
-	font-size: 13px;
+	font-size: 16px;
 	text-align: justify-all;
 }
 
@@ -656,6 +658,7 @@ a.timeline__btm--plus:before {
 }
 
 .better__holder {
+	line-height: 1.1;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -689,11 +692,12 @@ a.timeline__btm--plus:before {
 
 .better__subtitle {
 	font-size: 25px;
-	padding-bottom: 45px;
+	padding-bottom: 15px;
 }
 
 .better__text {
-	font-size: 14px;
+	font-size: 16px;
+	line-height: normal;
 }
 
 .repairs {
@@ -729,6 +733,7 @@ a.timeline__btm--plus:before {
 }
 
 .work {
+	display: none;
 	background-color: #454545;
 }
 
@@ -766,7 +771,7 @@ a.timeline__btm--plus:before {
 	display: -ms-flexbox;
 	display: flex;
 	flex-direction: row;
-	width: 95%;
+	width: 90%;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: row;
@@ -790,9 +795,28 @@ a.timeline__btm--plus:before {
 
 .work__slider {
 	position: relative;
-	width: 95%;
+	width: 90%;
 	height: auto;
 	margin: 0 auto;
+}
+
+.work__slider .slick-next:before,
+.work__slider .slick-prev:before {
+	font-size: 40px;
+}
+
+.work__slider .slick-next,
+.work__slider .slick-prev {
+	width: 40px;
+	height: 40px;
+}
+
+.work__slider .slick-next {
+	right: -50px;
+}
+
+.work__slider .slick-prev {
+	left: -50px;
 }
 
 .reviews {
@@ -815,18 +839,59 @@ a.timeline__btm--plus:before {
 
 .reviews__picture {
 	overflow: hidden;
-	width: 140px;
-	height: 140px;
+	width: 85px;
+	height: 85px;
 	margin: 0 auto;
 	padding-bottom: 7px;
-	border: solid 2px #eea200;
-	border-radius: 50%;
+	cursor: pointer;
+	-webkit-transition: all .7s ease;
+	transition: all .7s ease;
+	opacity: .5;
+	color: #eea200;
+}
+
+.reviews__picture:hover {
+	opacity: 1;
+}
+
+.reviews__box {
+	position: relative;
+}
+
+.reviews__picture--active {
+	-webkit-transition: all .7s ease;
+	transition: all .7s ease;
+	opacity: 1;
+}
+
+.reviews__picture--active:after {
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 100%;
+	height: 5px;
+	content: '';
+	background-color: #eea200;
 }
 
 .reviews__img {
 	width: 100%;
 	-o-object-fit: cover;
 	object-fit: cover;
+}
+
+.reviews__inner {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	background-color: #eea200;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 
 .reviews__name {
@@ -976,7 +1041,27 @@ a.timeline__btm--plus:before {
 	color: #dcdcdc;
 }
 
-.reviews_container {
+.reviews__slider .slick-next:before,
+.reviews__slider .slick-prev:before {
+	font-size: 40px;
+}
+
+.reviews__slider .slick-next,
+.reviews__slider .slick-prev {
+	width: 40px;
+	height: 40px;
+}
+
+.reviews__slider .slick-next {
+	right: -50px;
+}
+
+.reviews__slider .slick-prev {
+	left: -50px;
+}
+
+.reviews__container {
+	display: none;
 	padding-bottom: 40px;
 }
 
@@ -1287,12 +1372,12 @@ a.timeline__btm--plus {
 }
 
 .work__slider {
-	width: 90%;
+	width: 85%;
 	height: auto;
 }
 
 .work__box {
-	width: 90%;
+	width: 85%;
 }
 
 .reviews__wrap {
@@ -1585,6 +1670,25 @@ a.timeline__btm--plus {
 	width: 80%;
 }
 
+.work__slider .slick-next:before,
+.work__slider .slick-prev:before {
+	font-size: 20px;
+}
+
+.work__slider .slick-next,
+.work__slider .slick-prev {
+	width: 20px;
+	height: 20px;
+}
+
+.work__slider .slick-next {
+	right: -25px;
+}
+
+.work__slider .slick-prev {
+	left: -25px;
+}
+
 .reviews__wrap {
 	width: 100%;
 	padding: 70px 10px 40px 10px;
@@ -1630,6 +1734,25 @@ a.timeline__btm--plus {
 
 .reviews__holder svg.fa-4x {
 	font-size: 2em;
+}
+
+.reviews__slider .slick-next:before,
+.reviews__slider .slick-prev:before {
+	font-size: 20px;
+}
+
+.reviews__slider .slick-next,
+.slick-prev {
+	width: 20px;
+	height: 20px;
+}
+
+.reviews__slider .slick-next {
+	right: -25px;
+}
+
+.reviews__slider .slick-prev {
+	left: -25px;
 }
 
 .timeline__wrap {

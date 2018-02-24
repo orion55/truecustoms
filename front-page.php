@@ -2,57 +2,55 @@
 
     <div class="offer">
         <div class="offer__wrap">
-            <div class="offer__header" data-aos="zoom-in">
+            <div class="offer__header">
                 <div class="offer__box offer__box--one">
                     <div class="offer_picture">
                         <img class="offer__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png">
                     </div>
                     <div class="offer__desc">Ремонт и покраска бамперов</div>
                 </div>
-				<?php $truecustoms_options = get_option( 'truecustoms_option_name' );
-				$address                   = $truecustoms_options['_0']; // Адрес
-				$phone                     = $truecustoms_options['_1']; // Телефон ?>
+                <?php $truecustoms_options = get_option('truecustoms_option_name');
+                $address = $truecustoms_options['_0']; // Адрес
+                $phone = $truecustoms_options['_1']; // Телефон ?>
                 <div class="offer__box offer__box--two">
                     <div class="offer__address">
-						<?php if ( empty( $address ) ): echo 'г. Екатеринбург, ул. Лукиных, 1а'; else: echo $address; endif; ?>
+                        <?php if (empty($address)): echo 'г. Екатеринбург, ул. Лукиных, 1а'; else: echo $address; endif; ?>
                     </div>
                 </div>
                 <div class="offer__box offer__box--three">
                     <div class="offer__phone">
-						<?php $phone_href = '+73433725517';
-						$phone_text       = '+7 (343) 372-55-17';
-						if ( ! empty( $phone ) ): $phone_href = preg_replace( "/[^0-9+]+/i", "", $phone );
-							$phone_text                       = $phone;
-						endif; ?>
+                        <?php $phone_href = '+73433725517';
+                        $phone_text = '+7 (343) 372-55-17';
+                        if (!empty($phone)): $phone_href = preg_replace("/[^0-9+]+/i", "", $phone);
+                            $phone_text = $phone;
+                        endif; ?>
                         <a href="tel:<?php echo $phone_href ?>" class="offer__link"><?php echo $phone_text ?></a>
                     </div>
                 </div>
             </div>
 
             <div class="offer__container">
-                <h1 class="offer__title" data-aos="zoom-in" data-aos-offset="500" data-aos-easing="ease-in-sine"
-                    data-aos-duration="1000">
+                <h1 class="offer__title">
                     <span class="offer__selection">Починим и покрасим Ваш бампер</span><br/>
                     <span class="offer__text">за 6 тысяч рублей всего за 3 дня</span>
                 </h1>
                 <a href="#"
-                   class="pure-button pure-button-primary offer__btn--big hvr-sweep-to-right modal-open modal-blur"
-                   data-aos="zoom-in" data-aos-offset="500" data-aos-easing="ease-in-sine">
+                   class="pure-button pure-button-primary offer__btn--big hvr-sweep-to-right modal-open modal-blur">
                     Записаться на ремонт</a>
                 <div class="offer__work">
-                    <div class="offer__holder" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="offer__holder">
                         <div class="offer__icon">
                             <i class="sprite sprite-003"></i>
                         </div>
                         <div class="offer__subject">Полный<br/>комплекс работ</div>
                     </div>
-                    <div class="offer__holder" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="offer__holder">
                         <div class="offer__icon">
                             <i class="sprite sprite-006"></i>
                         </div>
                         <div class="offer__subject">Все работы<br/>за 3 дня</div>
                     </div>
-                    <div class="offer__holder" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="offer__holder">
                         <div class="offer__icon">
                             <i class="sprite sprite-002"></i>
                         </div>
@@ -219,96 +217,117 @@
     <div class="reviews">
         <div class="reviews__wrap">
             <div class="reviews__title" data-aos="zoom-in">Отзывы о нас</div>
-            <div class="reviews_container">
+        </div>
+        <div class="reviews__inner">
+            <?php
+            $args = array(
+                'numberposts' => 10,
+                'orderby' => 'title',
+                'order' => 'ASC',
+                'post_type' => 'review'
+            );
+            $posts = get_posts($args);
+
+            $index = 0;
+            foreach ($posts as $post) {
+                setup_postdata($post); ?>
+                <div class="reviews__box">
+                    <?php $title = get_the_title();
+                    $customer_photos = types_render_field("customer_photos", array(
+                        "alt" => $title,
+                        "class" => "reviews__img"
+                    ));
+                    if (!empty($customer_photos)) : ?>
+                        <div class="reviews__picture" data-index="<?php echo $index; ?>">
+                            <?php echo $customer_photos ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <?php
+                $index++;
+            }
+            wp_reset_postdata(); ?>
+        </div>
+        <div class="reviews__wrap">
+            <div class="reviews__container">
                 <div class="reviews__slider">
-					<?php
-					global $post;
-					$args    = array(
-						'numberposts' => 10,
-						'orderby'     => 'title',
-						'order'       => 'ASC',
-						'post_type'   => 'review'
-					);
-					$myposts = get_posts( $args );
-					foreach ( $myposts as $post ) {
-						setup_postdata( $post );
-						?>
+                    <?php
+                    global $post;
+                    $args = array(
+                        'numberposts' => 10,
+                        'orderby' => 'title',
+                        'order' => 'ASC',
+                        'post_type' => 'review'
+                    );
+                    $myposts = get_posts($args);
+                    foreach ($myposts as $post) {
+                        setup_postdata($post);
+                        ?>
                         <div class="reviews__holder">
-                            <div class="reviews__box">
-								<?php $title     = get_the_title();
-								$customer_photos = types_render_field( "customer_photos", array(
-									"alt"   => $title,
-									"class" => "reviews__img"
-								) );
-								if ( ! empty( $customer_photos ) ) : ?>
-                                    <div class="reviews__picture">
-										<?php echo $customer_photos ?>
-                                    </div>
-								<?php endif;
-								$name = types_render_field( "name" );
-								$name = trim( $name );
-								$age  = types_render_field( "age" );
-								$age  = trim( $age );
-								if ( ! empty( $name ) ) : ?>
-                                    <div class="reviews__name">
-										<?php echo $name; ?>
-										<?php if ( ! empty( $age ) ) : $age = " , " . $age . " лет"; ?>
-                                            <span class="reviews__age"><?php echo $age ?></span>
-										<?php endif; ?>
-                                    </div>
-								<?php endif; ?>
-                            </div>
                             <div class="reviews__wrapper">
-								<?php
-								$damaged_car  = types_render_field( "damaged_car", array(
-									"alt"   => 'car-before',
-									"class" => "reviews__img--car"
-								) );
-								$finished_car = types_render_field( "finished_car", array(
-									"alt"   => 'car-after',
-									"class" => "reviews__img--car"
-								) );
-								if ( ! ( empty( $damaged_car ) && empty( $finished_car ) ) ) :
-									?>
+                                <?php
+                                $damaged_car = types_render_field("damaged_car", array(
+                                    "alt" => 'car-before',
+                                    "class" => "reviews__img--car"
+                                ));
+                                $finished_car = types_render_field("finished_car", array(
+                                    "alt" => 'car-after',
+                                    "class" => "reviews__img--car"
+                                ));
+                                if (!(empty($damaged_car) && empty($finished_car))) :
+                                    ?>
                                     <div class="reviews__col reviews__col--one">
                                         <div class="cocoen reviews__coc">
-											<?php if ( ! empty( $damaged_car ) ) : echo $damaged_car; endif; ?>
-											<?php if ( ! empty( $finished_car ) ) : echo $finished_car; endif; ?>
+                                            <?php if (!empty($damaged_car)) : echo $damaged_car; endif; ?>
+                                            <?php if (!empty($finished_car)) : echo $finished_car; endif; ?>
                                         </div>
                                         <div class="reviews__cube">
                                             <div class="reviews__row work__row--one">До ремонта</div>
                                             <div class="reviews__row work__row--two">После ремонта</div>
                                         </div>
                                     </div>
-								<?php endif; ?>
+                                <?php endif; ?>
                                 <div class="reviews__col reviews__col--two">
-									<?php $brand = types_render_field( "brand" );
-									if ( ! empty( $brand ) ) :?>
+                                    <?php $brand = types_render_field("brand");
+                                    if (!empty($brand)) :?>
                                         <div class="reviews__label">Марка авто</div>
                                         <div class="reviews__text"><?php echo $brand; ?></div>
-									<?php endif;
-									$list_of_works = types_render_field( "list_of_works" );
-									if ( ! empty( $list_of_works ) ) :
-										?>
+                                    <?php endif;
+                                    $list_of_works = types_render_field("list_of_works");
+                                    if (!empty($list_of_works)) :
+                                        ?>
                                         <div class="reviews__label">Список работ</div>
                                         <div class="reviews__text"><?php echo $list_of_works; ?></div>
-									<?php endif; ?>
+                                    <?php endif; ?>
                                 </div>
-								<?php $content = get_the_content();
-								if ( ! empty( $content ) ) :?>
+                                <?php $content = get_the_content();
+                                if (!empty($content)) :?>
                                     <div class="reviews__col reviews__col--three">
                                         <div class="reviews__text">
-											<?php echo $content; ?>
+                                            <?php echo $content; ?>
                                         </div>
+                                        <?php $name = types_render_field("name");
+                                        $name = trim($name);
+                                        $age = types_render_field("age");
+                                        $age = trim($age);
+                                        if (!empty($name)) : ?>
+                                            <div class="reviews__name">
+                                                <?php echo $name; ?>
+                                                <?php if (!empty($age)) : $age = " , " . $age . " лет"; ?>
+                                                    <span class="reviews__age"><?php echo $age ?></span>
+                                                <?php endif; ?>
+                                            </div>
+                                        <?php endif; ?>
                                     </div>
-								<?php endif; ?>
+                                <?php endif; ?>
+
                             </div>
                             <i class="fas fa-quote-left reviews__quote-left fa-4x"></i>
                             <i class="fas fa-quote-right reviews__quote-right fa-4x"></i>
                         </div>
-					<?php }
-					wp_reset_postdata();
-					?>
+                    <?php }
+                    wp_reset_postdata();
+                    ?>
                 </div>
             </div>
             <a href="#"
@@ -333,7 +352,7 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="address__holder">
-                                <div class="address__city"><?php if ( empty( $address ) ): echo 'г. Екатеринбург, ул. Лукиных, 1а'; else: echo $address; endif; ?>
+                                <div class="address__city"><?php if (empty($address)): echo 'г. Екатеринбург, ул. Лукиных, 1а'; else: echo $address; endif; ?>
                                 </div>
                                 <div class="address__phone"><a href="tel:<?php echo $phone_href ?>"
                                                                class="address__link"><?php echo $phone_text ?></a></div>
