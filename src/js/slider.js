@@ -10,7 +10,10 @@ jQuery(document).ready(function ($) {
         infinite: true,
         arrows: true
     });
-    $('.reviews__slider').slick({
+
+    var reviews__slider = $('.reviews__slider');
+
+    reviews__slider.slick({
         lazyLoad: 'ondemand',
         autoplay: false,
         autoplaySpeed: 10000,
@@ -29,6 +32,14 @@ jQuery(document).ready(function ($) {
         $(reviews__picture).removeClass('reviews__picture--active');
         $(this).addClass('reviews__picture--active');
         var index = $(this).data('index');
-        console.log(index);
+        $(reviews__slider).slick('slickGoTo', index);
+    });
+
+    reviews__slider.on('afterChange', function (event, slick, currentSlide) {
+        $(reviews__picture).removeClass('reviews__picture--active');
+        var current__slide = $(reviews__picture).filter(function () {
+            return $(this).data('index') === currentSlide
+        });
+        $(current__slide).addClass('reviews__picture--active');
     });
 });

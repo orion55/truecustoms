@@ -733,7 +733,6 @@ a.timeline__btm--plus:before {
 }
 
 .work {
-	display: none;
 	background-color: #454545;
 }
 
@@ -1061,7 +1060,6 @@ a.timeline__btm--plus:before {
 }
 
 .reviews__container {
-	display: none;
 	padding-bottom: 40px;
 }
 
