@@ -1525,13 +1525,13 @@ a.offer__btn--big,
 a.better__btn,
 a.repairs__btn,
 a.reviews__btn {
-	font-size: 21px;
+	font-size: 18px;
 	width: 95%;
 	padding: 20px 0;
 }
 
 a.timeline__btm--plus {
-	font-size: 20px;
+	font-size: 16px;
 	width: 100%;
 	margin-top: 40px;
 	margin-bottom: 15px;
@@ -1685,6 +1685,10 @@ a.timeline__btm--plus {
 
 .work__slider .slick-prev {
 	left: -25px;
+}
+
+.work__row {
+	font-size: 14px;
 }
 
 .reviews__wrap {
