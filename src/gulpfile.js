@@ -126,14 +126,14 @@ gulp.task('vendor-css', function () {
 gulp.task('deploy-ftp', function () {
 
     var conn = ftp.create({
-        host: 'grol55wy.beget.tech',
-        user: 'grol55wy',
-        password: 'liDDJhuJ',
+        host: 'truecuoo.beget.tech',
+        user: 'truecuoo',
+        password: 'SlaVFKtQ',
         parallel: 10,
         log: gutil.log
     });
 
-    const path = '/truecustoms.infoblog72.ru/public_html/wp-content/themes/truecustoms/assets/';
+    const path = '/truecustoms.ru/public_html/wp-content/themes/truecustoms/assets/';
 
     var globs = [
         '../assets/' + subfolder + '/**'

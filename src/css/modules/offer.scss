@@ -20,6 +20,7 @@
   flex-direction: row;
   justify-content: flex-start;
   margin: 0 auto;
+  z-index: 10000;
 }
 
 .offer__container {
@@ -108,6 +109,13 @@
   padding-top: 15px;
 }
 
+.offer__sticky {
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+}
+
 @media only screen and (min-device-width: 768px) and (max-width: 1199px) {
   .offer {
     height: auto;
@@ -118,11 +126,14 @@
   }
   .offer__header {
     width: 100%;
+    position: fixed;
+    top: 0;
   }
   .offer__container {
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
+    margin-top: 90px;
   }
   .offer__work {
     width: 100%;
@@ -141,7 +152,9 @@
     width: 100%;
     flex-direction: column;
     height: auto;
-    padding-top: 30px;
+    padding-top: 10px;
+    position: fixed;
+    top: 0;
   }
   .offer__box {
     padding-bottom: 30px;
@@ -152,6 +165,7 @@
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 20px;
+    margin-top: 130px;
   }
   .offer__title {
     font-size: 36px;
@@ -175,5 +189,23 @@
     text-align: left;
     font-size: 22px;
     padding-top: 0;
+    width: 55%;
   }
+
+  .offer__box--two {
+    display: none;
+  }
+
+  .offer__box--one {
+    padding-bottom: 10px;
+  }
+
+  .offer__desc {
+    margin-top: -5px;
+  }
+
+  .offer__box--three {
+    padding-bottom: 20px;
+  }
+
 }

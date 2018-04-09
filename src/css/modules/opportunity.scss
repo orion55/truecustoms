@@ -18,7 +18,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-bottom: 68px;
+  padding-bottom: 30px;
   align-items: flex-start;
 }
 
@@ -54,6 +54,10 @@
 .opportunity__container {
   display: flex;
   flex-direction: column;
+}
+
+.opportunity a.better__btn {
+    margin-bottom: 68px;
 }
 
 @media only screen and (min-device-width: 768px) and (max-width: 1199px) {
@@ -92,14 +96,15 @@
   }
   .opportunity__holder {
     flex-direction: row;
-    padding-bottom: 20px;
+    align-items: flex-start;
+    padding-bottom: 30px;
     width: 100%;
     padding-left: 0;
 
   }
   .opportunity__subtitle {
     text-align: left;
-    font-size: 22px;
+    font-size: 20px;
   }
   .opportunity__text {
     text-align: left;

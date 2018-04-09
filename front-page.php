@@ -32,7 +32,7 @@
             <div class="offer__container">
                 <h1 class="offer__title">
                     <span class="offer__selection">Починим и покрасим Ваш бампер</span><br/>
-                    <span class="offer__text">за 6 тысяч рублей всего за 3 дня</span>
+                    <span class="offer__text">за 6 000 рублей всего за 3 дня</span>
                 </h1>
                 <a href="#"
                    class="pure-button pure-button-primary offer__btn--big hvr-sweep-to-right modal-open modal-blur">
@@ -62,7 +62,7 @@
     </div>
     <div class="opportunity">
         <div class="opportunity__wrap">
-            <h2 class="opportunity__title">Наши возможности</h2>
+            <h2 class="opportunity__title">Почему клиенты выбирают нас</h2>
             <div class="opportunity__box">
                 <div class="opportunity__holder" data-aos="flip-left">
                     <div class="opportunity__icon">
@@ -108,8 +108,11 @@
                         <div class="opportunity__text">Именно столько машин, минимум, проходит через наш автоцентр.
                         </div>
                     </div>
-                </div>
+                </div>                 
             </div>
+            <a href="#"
+               class="pure-button pure-button-primary better__btn hvr-sweep-to-right modal-open modal-blur">
+                Записаться на осмотр</a>           
         </div>
     </div>
     <div class="better">
@@ -140,9 +143,9 @@
                     </div>
                 </div>
             </div>
-            <a href="#"
+            <!-- <a href="#"
                class="pure-button pure-button-primary better__btn hvr-sweep-to-right modal-open modal-blur">
-                Записаться на осмотр</a>
+                Записаться на осмотр</a> -->
         </div>
     </div>
     <div class="work">

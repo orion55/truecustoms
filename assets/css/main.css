@@ -222,6 +222,7 @@ input.btn__modal {
 }
 
 .offer__header {
+	z-index: 10000;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -353,6 +354,13 @@ input.btn__modal {
 .offer__subject {
 	font-size: 17px;
 	padding-top: 15px;
+}
+
+.offer__sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
 }
 
 /*!
@@ -552,7 +560,7 @@ a.timeline__btm--plus:before {
 	display: -ms-flexbox;
 	display: flex;
 	flex-direction: row;
-	padding-bottom: 68px;
+	padding-bottom: 30px;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: row;
@@ -618,8 +626,13 @@ a.timeline__btm--plus:before {
 	-ms-flex-direction: column;
 }
 
+.opportunity a.better__btn {
+	margin-bottom: 68px;
+}
+
 .better {
 	position: relative;
+	display: none;
 	width: 100%;
 	height: auto;
 	text-align: center;
@@ -722,7 +735,6 @@ a.timeline__btm--plus:before {
 }
 
 .repairs__title {
-	font-size: 46px;
 	margin: 0;
 	text-align: center;
 	text-transform: uppercase;
@@ -819,6 +831,7 @@ a.timeline__btm--plus:before {
 }
 
 .reviews {
+	display: none;
 	color: #262626;
 	background-color: #fcfcfc;
 }
@@ -1288,11 +1301,14 @@ a.timeline__btm--plus:before {
 }
 
 .offer__header {
+	position: fixed;
+	top: 0;
 	width: 100%;
 }
 
 .offer__container {
 	width: 100%;
+	margin-top: 90px;
 	padding-right: 20px;
 	padding-left: 20px;
 }
@@ -1464,10 +1480,12 @@ a.timeline__btm--plus {
 }
 
 .offer__header {
+	position: fixed;
+	top: 0;
 	flex-direction: column;
 	width: 100%;
 	height: auto;
-	padding-top: 30px;
+	padding-top: 10px;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
@@ -1480,6 +1498,7 @@ a.timeline__btm--plus {
 
 .offer__container {
 	width: 100%;
+	margin-top: 130px;
 	padding-right: 10px;
 	padding-bottom: 20px;
 	padding-left: 10px;
@@ -1517,8 +1536,25 @@ a.timeline__btm--plus {
 
 .offer__subject {
 	font-size: 22px;
+	width: 55%;
 	padding-top: 0;
 	text-align: left;
+}
+
+.offer__box--two {
+	display: none;
+}
+
+.offer__box--one {
+	padding-bottom: 10px;
+}
+
+.offer__desc {
+	margin-top: -5px;
+}
+
+.offer__box--three {
+	padding-bottom: 20px;
 }
 
 a.offer__btn--big,
@@ -1527,6 +1563,8 @@ a.repairs__btn,
 a.reviews__btn {
 	font-size: 18px;
 	width: 95%;
+	margin-right: auto;
+	margin-left: auto;
 	padding: 20px 0;
 }
 
@@ -1559,15 +1597,18 @@ a.timeline__btm--plus {
 .opportunity__holder {
 	flex-direction: row;
 	width: 100%;
-	padding-bottom: 20px;
+	padding-bottom: 30px;
 	padding-left: 0;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: row;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
 }
 
 .opportunity__subtitle {
-	font-size: 22px;
+	font-size: 20px;
 	text-align: left;
 }
 
@@ -1819,6 +1860,14 @@ a.timeline__btm--plus {
 
 .footer__col--right {
 	margin: 0 auto;
+}
+
+}
+
+@media only screen and (max-width: 480px) {
+
+.repairs__title {
+	font-size: 28px !important;
 }
 
 }

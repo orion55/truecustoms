@@ -1,5 +1,8 @@
-AOS.init({
-    easing: 'ease-in-out-sine'
+jQuery(document).ready(function ($) {
+   
+    AOS.init({
+        easing: 'ease-in-out-sine'
+    });
 });
 jQuery(document).ready(function ($) {
     ymaps.ready(init);
@@ -73,6 +76,23 @@ jQuery(document).ready(function ($) {
         });
         $(current__slide).addClass('reviews__picture--active');
     });
+});
+
+jQuery(document).ready(function ($) {
+
+    var header = $(".offer__header");
+    var stickyTop = header.offset().top;
+    var win = $(window);
+
+    function myFunction() {
+        if (win.scrollTop() >= stickyTop) {
+            header.addClass("offer__sticky");
+        } else {
+            header.removeClass("offer__sticky");
+        }
+    }
+
+    win.scroll(myFunction);
 });
 
 jQuery(document).ready(function ($) {

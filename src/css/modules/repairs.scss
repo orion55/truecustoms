@@ -20,7 +20,6 @@
 }
 
 .repairs__title {
-  font-size: 46px;
   text-align: center;
   text-transform: uppercase;
   margin: 0;
@@ -45,5 +44,11 @@
   }
   .repairs__title {
     font-size: 36px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .repairs__title {
+    font-size: 28px !important;
   }
 }
