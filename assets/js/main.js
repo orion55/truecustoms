@@ -1,9 +1,10 @@
-jQuery(document).ready(function ($) {
-   
-    AOS.init({
-        easing: 'ease-in-out-sine'
-    });
+AOS.init({
+    easing: 'ease-in-out-sine',
+    disable: function () {
+        return window.innerWidth < 1200;
+    }
 });
+
 jQuery(document).ready(function ($) {
     ymaps.ready(init);
     var myMap,
