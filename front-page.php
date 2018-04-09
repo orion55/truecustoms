@@ -108,11 +108,11 @@
                         <div class="opportunity__text">Именно столько машин, минимум, проходит через наш автоцентр.
                         </div>
                     </div>
-                </div>                 
+                </div>
             </div>
             <a href="#"
                class="pure-button pure-button-primary better__btn hvr-sweep-to-right modal-open modal-blur">
-                Записаться на осмотр</a>           
+                Записаться на осмотр</a>
         </div>
     </div>
     <div class="better">
@@ -153,29 +153,28 @@
             <h2 class="work__title" data-aos="zoom-in">Несколько наших работ</h2>
             <div class="work__container">
                 <div class="work__slider">
-                    <div class="cocoen work__cocoen">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/car01-before.jpg"
-                             alt="car01-before" class="work__img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/car01-after.jpg"
-                             alt="car01-after" class="work__img">
+                    <div class="work__slide">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/slide01.png"
+                             alt="slide01" class="work__img">
+                        <div class="work__box">
+                            <div class="work__row work__row--one">До ремонта</div>
+                            <div class="work__row work__row--two">После ремонта</div>
+                        </div>
+                        <h3 class="work__subtitle">Mitsubishi Pajero, 2014г. - Ремонт бампера под ключ - 6000
+                            рублей</h3>
                     </div>
-                    <div class="cocoen work__cocoen">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/car02-before.jpg"
-                             alt="car02-before" class="work__img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/car02-after.jpg"
-                             alt="car02-after" class="work__img">
-                    </div>
-                    <div class="cocoen work__cocoen">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/car03-before.jpg"
-                             alt="car03-before" class="work__img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/car03-after.jpg"
-                             alt="car03-after" class="work__img">
+                    <div class="work__slide">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/slide02.png"
+                             alt="slide02" class="work__img">
+                        <div class="work__box">
+                            <div class="work__row work__row--one">До ремонта</div>
+                            <div class="work__row work__row--two">После ремонта</div>
+                        </div>
+                        <h3 class="work__subtitle">Mitsubishi Pajero, 2015г. - Ремонт бампера под ключ - 6000
+                            рублей</h3>
                     </div>
                 </div>
-                <div class="work__box">
-                    <div class="work__row work__row--one">До ремонта</div>
-                    <div class="work__row work__row--two">После ремонта</div>
-                </div>
+
             </div>
         </div>
     </div>
