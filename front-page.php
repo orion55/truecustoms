@@ -330,7 +330,7 @@
                                 if (!empty($content)) :?>
                                     <div class="reviews__col reviews__col--three">
                                         <div class="reviews__text">
-                                            <?php echo $content; ?>
+                                            <?php echo apply_filters('the_content', $content); ?>
                                         </div>
                                         <?php $name = types_render_field("name");
                                         $name = trim($name);
