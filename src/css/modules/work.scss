@@ -4,7 +4,7 @@
 }
 
 .work__wrap {
-  width: 100%;
+  width: 1200px;
   margin: 0 auto;
   text-align: center;
   padding-top: 35px;
@@ -26,7 +26,9 @@
 .work__box {
   display: flex;
   flex-direction: row;
-  width: 90%;
+  width: 1050px;
+  padding-bottom: 30px;
+  margin: 0 auto;
 }
 
 .work__row {
@@ -39,17 +41,33 @@
 .work__row--one {
   background-color: white;
   color: black;
+  width: 501px;
 }
 
 .work__row--two {
   background-color: $color-yellow-black;
+  width: 498px;
+}
+
+.work__row--space {
+  display: block;
+  width: 51px;
+  height: 28px;
 }
 
 .work__slider {
-  width: 90%;
+  width: 100%;
   height: auto;
   margin: 0 auto;
   position: relative;
+}
+
+.work__slide {
+  text-align: center;
+}
+
+.work__img {
+  margin: 0 auto;
 }
 
 .work__slider .slick-next:before, .work__slider .slick-prev:before {
@@ -69,6 +87,10 @@
   left: -50px;
 }
 
+.work__subtitle {
+  font-size: 18px;
+}
+
 @media only screen and (min-device-width: 768px) and (max-width: 1199px) {
   .work__wrap {
     width: 100%;
@@ -80,7 +102,16 @@
     height: auto;
   }
   .work__box {
-    width: 85%;
+    width: 100%;
+  }
+  .work__row--one, .work__row--two {
+    width: 49%;
+  }
+  .work__row--space {
+    width: 5%;
+  }
+  .work__subtitle {
+    font-size: 16px;
   }
 }
 
@@ -93,11 +124,11 @@
     font-size: 36px;
   }
   .work__slider {
-    width: 80%;
+    width: 90%;
     height: auto;
   }
   .work__box {
-    width: 80%;
+    width: 100%;
   }
   .work__slider .slick-next:before, .work__slider .slick-prev:before {
     font-size: 20px;
@@ -115,7 +146,17 @@
   .work__slider .slick-prev {
     left: -25px;
   }
-  .work__row{
+  .work__row {
     font-size: 14px;
+  }
+
+  .work__row--one, .work__row--two {
+    width: 49%;
+  }
+  .work__row--space {
+    width: 5%;
+  }
+  .work__subtitle {
+    font-size: 16px;
   }
 }

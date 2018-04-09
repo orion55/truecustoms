@@ -158,6 +158,7 @@
                              alt="slide01" class="work__img">
                         <div class="work__box">
                             <div class="work__row work__row--one">До ремонта</div>
+                            <div class="work__row work__row--space"></div>
                             <div class="work__row work__row--two">После ремонта</div>
                         </div>
                         <h3 class="work__subtitle">Mitsubishi Pajero, 2014г. - Ремонт бампера под ключ - 6000
@@ -168,9 +169,32 @@
                              alt="slide02" class="work__img">
                         <div class="work__box">
                             <div class="work__row work__row--one">До ремонта</div>
+                            <div class="work__row work__row--space"></div>
                             <div class="work__row work__row--two">После ремонта</div>
                         </div>
                         <h3 class="work__subtitle">Mitsubishi Pajero, 2015г. - Ремонт бампера под ключ - 6000
+                            рублей</h3>
+                    </div>
+                    <div class="work__slide">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/slide03.png"
+                             alt="slide03" class="work__img">
+                        <div class="work__box">
+                            <div class="work__row work__row--one">До ремонта</div>
+                            <div class="work__row work__row--space"></div>
+                            <div class="work__row work__row--two">После ремонта</div>
+                        </div>
+                        <h3 class="work__subtitle">Mitsubishi Pajero, 2016г. - Ремонт бампера под ключ - 6000
+                            рублей</h3>
+                    </div>
+                    <div class="work__slide">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/slide04.png"
+                             alt="slide04" class="work__img">
+                        <div class="work__box">
+                            <div class="work__row work__row--one">До ремонта</div>
+                            <div class="work__row work__row--space"></div>
+                            <div class="work__row work__row--two">После ремонта</div>
+                        </div>
+                        <h3 class="work__subtitle">Mitsubishi Pajero, 2017г. - Ремонт бампера под ключ - 6000
                             рублей</h3>
                     </div>
                 </div>
